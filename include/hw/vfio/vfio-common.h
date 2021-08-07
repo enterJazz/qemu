@@ -76,6 +76,7 @@ typedef struct VFIOAddressSpace {
 
 struct VFIOGroup;
 typedef struct VFIOContainerIO VFIOContainerIO;
+typedef struct VFIOUserProxy VFIOUserProxy;
 
 typedef struct VFIOContainer {
     VFIOAddressSpace *space;
@@ -149,6 +150,7 @@ typedef struct VFIODevice {
     OnOffAuto pre_copy_dirty_page_tracking;
     bool dirty_pages_supported;
     bool dirty_tracking;
+    VFIOUserProxy *proxy;
     struct vfio_region_info **regions;
 } VFIODevice;
 
