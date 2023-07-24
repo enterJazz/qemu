@@ -13,6 +13,7 @@ LDFLAGS=-nostdlib -static -Wl,-T$(LINK_SCRIPT) -Wl,--build-id=none
 ASM_TESTS =                                                                    \
     bal                                                                        \
     cksm                                                                       \
+    clm                                                                        \
     exrl-ssm-early                                                             \
     sam                                                                        \
     lpsw                                                                       \
