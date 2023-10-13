@@ -2986,9 +2986,9 @@ static int kvm_discard_memory(const MemoryRegionSection *section,
      * control how discarding is handling, so take those into account.
      */
     if (!((shared_to_private &&
-          (cgs->discard == DISCARD_BOTH || cgs->discard == DISCARD_SHARED)) ||
-        (!shared_to_private &&
-          (cgs->discard == DISCARD_BOTH || cgs->discard == DISCARD_PRIVATE)))) {
+           (cgs->discard == DISCARD_BOTH || cgs->discard == DISCARD_SHARED)) ||
+          (!shared_to_private &&
+           (cgs->discard == DISCARD_BOTH || cgs->discard == DISCARD_PRIVATE)))) {
         return 0;
     }
 
