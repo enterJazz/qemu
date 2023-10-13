@@ -299,7 +299,8 @@ int kvm_create_gmemfd(uint64_t size, uint64_t flags)
         gmem.flags = 0;
 
     gmemfd = kvm_vm_ioctl(kvm_state, KVM_CREATE_GUEST_MEMFD, &gmem);
-    g_warning("%s: created memfd: %d", __func__, gmemfd);
+    g_warning("%s: created memfd: %d, size: %llx, flags: %llx",
+              __func__, gmemfd, gmem.size, gmem.flags);
 
     return gmemfd;
 }
