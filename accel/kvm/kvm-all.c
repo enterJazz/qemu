@@ -3097,7 +3097,7 @@ int kvm_cpu_exec(CPUState *cpu)
                 ret = EXCP_INTERRUPT;
                 break;
             }
-            if (run_ret == -1) {
+            if (run_ret == -EFAULT) {
                 run_ret = 0;
                 goto skip;
             }
